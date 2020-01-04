@@ -45,53 +45,66 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Controls.Add(this.txtServidor);
             this.groupBox1.Controls.Add(this.txtBaseDeDatos);
             this.groupBox1.Location = new System.Drawing.Point(210, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conexión a base de datsos";
             // 
             // txtServidor
             // 
-            this.txtServidor.Location = new System.Drawing.Point(19, 31);
+            this.txtServidor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServidor.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtServidor.Location = new System.Drawing.Point(19, 23);
             this.txtServidor.Name = "txtServidor";
-            this.txtServidor.Size = new System.Drawing.Size(167, 22);
-            this.txtServidor.TabIndex = 2;
+            this.txtServidor.Size = new System.Drawing.Size(167, 27);
+            this.txtServidor.TabIndex = 0;
+            this.txtServidor.Text = "LocalDB";
             // 
             // txtBaseDeDatos
             // 
-            this.txtBaseDeDatos.Location = new System.Drawing.Point(19, 59);
+            this.txtBaseDeDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBaseDeDatos.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtBaseDeDatos.Location = new System.Drawing.Point(19, 60);
             this.txtBaseDeDatos.Name = "txtBaseDeDatos";
-            this.txtBaseDeDatos.Size = new System.Drawing.Size(167, 22);
-            this.txtBaseDeDatos.TabIndex = 3;
+            this.txtBaseDeDatos.Size = new System.Drawing.Size(167, 27);
+            this.txtBaseDeDatos.TabIndex = 1;
+            this.txtBaseDeDatos.Text = "Transportes";
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Controls.Add(this.txtUsuario);
             this.groupBox2.Controls.Add(this.txtContrasenia);
             this.groupBox2.Location = new System.Drawing.Point(210, 133);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 100);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de usuario";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(19, 33);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtUsuario.Location = new System.Drawing.Point(19, 24);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(167, 22);
-            this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.Size = new System.Drawing.Size(167, 27);
+            this.txtUsuario.TabIndex = 0;
             // 
             // txtContrasenia
             // 
+            this.txtContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasenia.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.txtContrasenia.Location = new System.Drawing.Point(19, 61);
             this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.Size = new System.Drawing.Size(167, 22);
-            this.txtContrasenia.TabIndex = 5;
+            this.txtContrasenia.PasswordChar = '●';
+            this.txtContrasenia.Size = new System.Drawing.Size(167, 27);
+            this.txtContrasenia.TabIndex = 1;
             // 
             // btnIniciar
             // 
@@ -99,7 +112,7 @@
             this.btnIniciar.Location = new System.Drawing.Point(210, 248);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(200, 36);
-            this.btnIniciar.TabIndex = 2;
+            this.btnIniciar.TabIndex = 1;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
@@ -110,14 +123,14 @@
             this.btnCancelar.Location = new System.Drawing.Point(210, 288);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(200, 36);
-            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 1);
