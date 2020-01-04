@@ -70,7 +70,6 @@ namespace Transportes
             if (resultado.Exitoso == true)
             {
                 MenuPrincipal.DesbloqueaControles();
-                Console.Write(resultado.Mensaje);
                 this.Close();
             }
             else
