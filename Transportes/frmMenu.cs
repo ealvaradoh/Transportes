@@ -16,5 +16,34 @@ namespace Transportes
         {
             InitializeComponent();
         }
+
+        private void loguearse()
+        {
+            var frmLogin = new frmLogin();
+            frmLogin.MenuPrincipal = this;
+            frmLogin.ShowDialog();
+        }
+
+        private void BloqueaControles()
+        {
+            foreach (Control control in Controls)
+                if (control is MenuStrip)
+                    control.Enabled = false;
+        }
+
+        public void DesbloqueaControles()
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is MenuStrip)
+                    control.Enabled = true;
+            }
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            BloqueaControles();
+            loguearse();
+        }
     }
 }
