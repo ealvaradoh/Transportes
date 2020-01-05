@@ -1,4 +1,6 @@
 ﻿using BL.Transportes;
+using BL.Transportes.BusinessLayer;
+using BL.Transportes.Conexion;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -19,8 +21,10 @@ namespace BL.Transportes
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            Database.SetInitializer(new DatosDeInicio());
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Cat_Buses> Buses { get; set; }
     }
 }

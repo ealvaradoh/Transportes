@@ -57,6 +57,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCatBuses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatBuses.Designer.cs">
+      <DependentUpon>frmCatBuses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaBoletos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaBoletos.Designer.cs">
+      <DependentUpon>frmListaBoletos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +83,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCatBuses.resx">
+      <DependentUpon>frmCatBuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaBoletos.resx">
+      <DependentUpon>frmListaBoletos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +105,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.Transportes.BusinessLayer.BoletosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Transportes.BusinessLayer.Cat_Buses.datasource" />
+    <None Include="Properties\DataSources\BL.Transportes.BusinessLayer.Cat_BusesBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

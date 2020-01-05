@@ -24,6 +24,16 @@ namespace Transportes
             frmLogin.ShowDialog();
         }
 
+        public void DatosDeConexion()
+        {
+            string servidor = frmLogin.servidorLog;
+            string usuario = frmLogin.usuarioLog;
+            string contrasenia = frmLogin.contraseniaLog;
+
+            tssUsuario.Text = tssUsuario.Text + " " + usuario;
+            tssServidor.Text = tssServidor.Text + " " + servidor;
+        }
+
         private void BloqueaControles()
         {
             foreach (Control control in Controls)
@@ -44,6 +54,25 @@ namespace Transportes
         {
             BloqueaControles();
             loguearse();
+        }
+
+        private frmCatBuses frmCatBuses;
+        private void busesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmCatBuses == null)
+            {
+                frmCatBuses = new frmCatBuses();
+                frmCatBuses.MdiParent = this;
+                frmCatBuses.Show();
+            }
+            else if (frmCatBuses.IsDisposed)
+            {
+                frmCatBuses = new frmCatBuses();
+                frmCatBuses.MdiParent = this;
+                frmCatBuses.Show();
+            }
+            else
+                frmCatBuses.Activate();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Transportes
     {
         public frmMenu MenuPrincipal { get; set; }
         UsuariosBL _usuarios;
-
+   
         public frmLogin()
         {
             InitializeComponent();
@@ -27,12 +27,6 @@ namespace Transportes
             servidorTlist.Add(txtServidor);
             servidorsSlist.Add("Servidor");
             SetCueBanner(ref servidorTlist, servidorsSlist);
-
-            List<TextBox> BaseDeDatosTlist = new List<TextBox>();
-            List<string> BaseDeDatosSlist = new List<String>();
-            BaseDeDatosTlist.Add(txtBaseDeDatos);
-            BaseDeDatosSlist.Add("Base de datos");
-            SetCueBanner(ref BaseDeDatosTlist, BaseDeDatosSlist);
 
             List<TextBox> usuarioTlist = new List<TextBox>();
             List<string> usuarioSlist = new List<String>();
@@ -64,16 +58,30 @@ namespace Transportes
             Application.Exit();
         }
 
+        public static string servidorLog;
+        public static string usuarioLog;
+        public static string contraseniaLog;
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            var resultado = _usuarios.AutorizarIngreso();
+            servidorLog = txtServidor.Text;
+            usuarioLog = txtUsuario.Text;
+            contraseniaLog = txtContrasenia.Text;
+
+            var resultado = _usuarios.AutorizarIngreso(usuarioLog, contraseniaLog);
             if (resultado.Exitoso == true)
             {
                 MenuPrincipal.DesbloqueaControles();
+                MenuPrincipal.DatosDeConexion();
                 this.Close();
             }
             else
                 MessageBox.Show(resultado.Mensaje);
+        }
+
+        private void btnMostrarUsuarios_Click(object sender, EventArgs e)
+        {
+            var usuarios = _usuarios.ObtenerUsuarios();
+
         }
     }
 }

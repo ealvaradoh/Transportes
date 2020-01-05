@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtServidor = new System.Windows.Forms.TextBox();
-            this.txtBaseDeDatos = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasenia = new System.Windows.Forms.TextBox();
@@ -47,10 +46,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Controls.Add(this.txtServidor);
-            this.groupBox1.Controls.Add(this.txtBaseDeDatos);
-            this.groupBox1.Location = new System.Drawing.Point(210, 12);
+            this.groupBox1.Location = new System.Drawing.Point(210, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(200, 66);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conexión a base de datsos";
@@ -65,22 +63,12 @@
             this.txtServidor.TabIndex = 0;
             this.txtServidor.Text = "LocalDB";
             // 
-            // txtBaseDeDatos
-            // 
-            this.txtBaseDeDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBaseDeDatos.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtBaseDeDatos.Location = new System.Drawing.Point(19, 60);
-            this.txtBaseDeDatos.Name = "txtBaseDeDatos";
-            this.txtBaseDeDatos.Size = new System.Drawing.Size(167, 27);
-            this.txtBaseDeDatos.TabIndex = 1;
-            this.txtBaseDeDatos.Text = "Transportes";
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Controls.Add(this.txtUsuario);
             this.groupBox2.Controls.Add(this.txtContrasenia);
-            this.groupBox2.Location = new System.Drawing.Point(210, 133);
+            this.groupBox2.Location = new System.Drawing.Point(210, 134);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 100);
             this.groupBox2.TabIndex = 0;
@@ -109,7 +97,7 @@
             // btnIniciar
             // 
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(210, 248);
+            this.btnIniciar.Location = new System.Drawing.Point(210, 249);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(200, 36);
             this.btnIniciar.TabIndex = 1;
@@ -120,7 +108,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(210, 288);
+            this.btnCancelar.Location = new System.Drawing.Point(210, 289);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(200, 36);
             this.btnCancelar.TabIndex = 2;
@@ -154,7 +142,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Incio de sesión";
+            this.Text = "Inicio de sesión";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -168,7 +156,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtServidor;
-        private System.Windows.Forms.TextBox txtBaseDeDatos;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContrasenia;

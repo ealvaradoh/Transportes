@@ -51,9 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context.cs" />
-    <Compile Include="ResultadoBL.cs" />
-    <Compile Include="UsuariosBL.cs" />
+    <Compile Include="BusinessLayer\BoletosBL.cs" />
+    <Compile Include="BusinessLayer\Cat_BusesBL.cs" />
+    <Compile Include="Conexion\Context.cs" />
+    <Compile Include="BusinessLayer\Resultado.cs" />
+    <Compile Include="BusinessLayer\UsuariosBL.cs" />
+    <Compile Include="Conexion\DatosDeInicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

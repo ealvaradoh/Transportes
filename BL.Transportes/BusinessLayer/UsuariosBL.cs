@@ -21,18 +21,27 @@ namespace BL.Transportes
 
         public BindingList<Usuario> ObtenerUsuarios()
         {
+            _context.Usuarios.Load();
             ListaUsuarios = _context.Usuarios.Local.ToBindingList();
             return ListaUsuarios;
         }
 
-        public ResultadoBL AutorizarIngreso()
+        public Resultado AutorizarIngreso(string usuario, string contrasenia)
         {
-            ObtenerUsuarios();
-            var resultado = new ResultadoBL();
+            var resultado = new Resultado();
             var usuarios = _context.Usuarios.ToList();
 
-            resultado.Exitoso = true;
-            resultado.Mensaje = "Ingresando al sistema";
+            foreach (var usuarioDB in usuarios)
+            {
+                if (usuario == usuarioDB.Nombre && contrasenia == usuarioDB.Contrasenia)
+                {
+                    resultado.Exitoso = true;
+                    resultado.Mensaje = "Ingresando al sistema";
+                    return resultado;
+                }
+            }
+            resultado.Exitoso = false;
+            resultado.Mensaje = "Usuario o contraseña es incorrecto";
 
             return resultado;
         }
